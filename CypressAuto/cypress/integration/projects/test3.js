@@ -7,7 +7,7 @@ describe('My First Test Suite', function(){
         
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
     
-   
+   //windows alert
    cy.get('#alertbtn').click()
    cy.get('#confirmbtn').click()
    cy.on('window:alert', (str)=>{
@@ -21,8 +21,13 @@ describe('My First Test Suite', function(){
     expect(str).to.equal('Hello , Are you sure you want to confirm?')
 
    })
+//invoking jquery function/navigating browser control.
 
-   
+   cy.get('#opentab').invoke('removeAttr','target').click()
+  
+   cy.url().should('include','rahulshettyacademy')
+
+   cy.go('back')
 
 
     
