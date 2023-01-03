@@ -21,7 +21,7 @@ describe('My First Test Suite', function(){
     expect(str).to.equal('Hello , Are you sure you want to confirm?')
 
    })
-//invoking jquery function/navigating browser control.
+//invoking jquery function/navigating browser control.switching tab
 
    cy.get('#opentab').invoke('removeAttr','target').click()
   

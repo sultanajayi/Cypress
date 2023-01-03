@@ -39,7 +39,7 @@ describe('My First Test Suite', function(){
     cy.get('#show-textbox').click()
     cy.get('#displayed-text').should('be.visible')
 
-    //radiobutton
+    ///radiobutton
 
     cy.get('[value="radio2"]').check().should('be.checked')
 

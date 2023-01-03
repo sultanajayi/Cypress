@@ -10,7 +10,7 @@ describe('My First Test Suite', function(){
     cy.get('tr td:nth-child(2)').each(($el, index, $list) =>{
        
       const text = $el.text()
-      if (text.includes('Ptyhon')) {
+      if (text.includes('Python')) {
         
          cy.get("tr td:nth-child(2)").eq(index).next().then(function(price)
         {
