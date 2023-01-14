@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test --browser chrome",
+    "recordDashBoardTest": "npm run test --record --key fa423514-5a84-42a7-b6a0-b5e7191bba12 --reporter mochawesome",
+    "GreenKartTest": "npm run test --spec \"cypress/integration/GreenKart/*\""
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,7 @@
   },
   "homepage": "https://github.com/sultanajayi/Cypress#readme",
   "devDependencies": {
-    "cypress": "^11.2.0",
+    "cypress": "^12.3.0",
     "cypress-iframe": "^1.0.1"
   }
 }
