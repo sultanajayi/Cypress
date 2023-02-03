@@ -6,13 +6,13 @@ describe('Login', () => {
     })
   
     it('allows a user to log in with valid credentials', () => {
-      cy.get('input[name="email"]').type('qa.analyst@email.com')
-      cy.get('input[name="password"]').type('Password123!')
+      cy.get('input[name="email"]').type('engineertestautomation@gmail.com')
+      cy.get('input[name="password"]').type('Qatestar12$')
       cy.get('button[type="submit"]').click()
     })
   
     it('displays an error message for invalid credentials', () => {
-      cy.get('input[name="email"]').type('qa.analyst@email.com')
+      cy.get('input[name="email"]').type('engineertestautomation@gmail.com')
       cy.get('input[name="password"]').type('Password123%')
       cy.get('button[type="submit"]').click()
   
@@ -27,7 +27,7 @@ describe('Login', () => {
     })
   
     it('displays an error message for password length requirement', () => {
-      cy.get('input[name="email"]').type('qa.analyst@email.com')
+      cy.get('input[name="email"]').type('engineertestautomation@gmail.com')
       cy.get('input[name="password"]').type('hello')
       cy.get('button[type="submit"]').click()
   
