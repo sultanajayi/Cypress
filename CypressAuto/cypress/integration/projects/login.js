@@ -2,7 +2,7 @@
 
 describe('Login', () => {
     beforeEach(() => {
-      cy.visit('https://topset-dev.vercel.app/login')
+      cy.visit(Cypress.env('url2'))
     })
   
     it('allows a user to log in with valid credentials', () => {
